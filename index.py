@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain.vectorstores import Cassandra
 from langchain.indexes import VectorstoreIndexCreator
-from langchain.llms import OpenAI
+from langchain.llms import OpenAI  # Correct import
 from langchain.embeddings import OpenAIEmbeddings
 import cassio
 from PyPDF2 import PdfReader
