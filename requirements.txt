@@ -1,0 +1,1 @@
+streamlit langchain_community.vectorstores langchain.indexes.vectorstore langchain_community.llms langchain_community.embeddings cassio PyPDF2 langchain.text_splitter
