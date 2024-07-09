@@ -11,7 +11,7 @@ from langchain.text_splitter import CharacterTextSplitter
 # (Preferably store these as secrets in Streamlit Cloud or a .env file)
 ASTRA_DB_TOKEN = st.secrets["astra_db_token"]
 ASTRA_DB_ID = st.secrets["astra_db_id"]
-OPENAI_API_KEY = "sk-proj-7ZTvPMCF54J4Pa7k7zsRT3BlbkFJc1rl8xfUylOqm0TVPcnq"
+OPENAI_API_KEY = "sk-proj-YWqI5UjqaDyPpbCJW8p2T3BlbkFJM2xQir5JAfcpVp3x1ORQ"
 TABLE_NAME = "qa_mini_demo"
 
 # --- Initialization (Outside Streamlit for efficiency) ---
