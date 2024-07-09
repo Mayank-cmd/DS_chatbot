@@ -1,6 +1,8 @@
 streamlit
-langchain-community
-langchain
+langchain_community.vectorstores
+langchain.indexes.vectorstore
+langchain_community.llms
+langchain_community.embeddings
 cassio
-pypdf2
-
+PyPDF2
+langchain.text_splitter 
