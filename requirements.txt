@@ -1,5 +1,4 @@
 streamlit
-langchain_community.vectorstores
 langchain.indexes.vectorstore
 langchain_community.llms
 langchain_community.embeddings
