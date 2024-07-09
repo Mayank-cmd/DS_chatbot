@@ -10,7 +10,7 @@ from langchain.text_splitter import CharacterTextSplitter
 # --- Configuration ---
 ASTRA_DB_TOKEN = "AstraCS:bZcUbzoJxZHhIkJsueNGWoyn:64cef7be4e840aedf12400789ab418f25d6eeddd1ca8db9c5d808593164ebea8"
 ASTRA_DB_ID = "52f36289-1cd8-4482-81de-9ff1d1387966"
-OPENAI_API_KEY = "sk-proj-QRscTbaSbuvg34vq4wlGT3BlbkFJaXEJwem4xcmvMOfqVtyL"
+OPENAI_API_KEY = "sk-proj-4WDnX1rbTbIHjXXsROVXT3BlbkFJGehojhvHLzRoCZBAj67i"
 TABLE_NAME = "qa_mini_demo"
 
 # --- Initialization ---
