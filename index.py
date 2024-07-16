@@ -6,8 +6,7 @@ from langchain.embeddings import OpenAIEmbeddings
 import cassio
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
-import pandas as pd
-from sklearn.metrics import accuracy_score, f1_score
+
 
 # --- Configuration ---
 # (Preferably store these as secrets in Streamlit Cloud or a .env file)
@@ -32,6 +31,7 @@ def load_pdf(uploaded_file):
         if content:
             raw_text += content
     return raw_text
+
 
 def add_to_vector_store(raw_text):
     text_splitter = CharacterTextSplitter(
@@ -73,21 +73,3 @@ if prompt := st.chat_input("Your question"):
         answer = vector_index.query(prompt, llm=llm)
         st.markdown(answer)
         st.session_state.messages.append({"role": "assistant", "content": answer})
-
-# --- Accuracy Testing ---
-if st.button("Run Accuracy Test"):
-    test_data = pd.read_csv("test_data.csv")
-    predictions = []
-    true_answers = test_data["expected_answer"].tolist()
-
-    vector_index = VectorStoreIndexWrapper(vectorstore=vector_store)
-
-    for question in test_data["question"]:
-        prediction = vector_index.query(question, llm=llm)
-        predictions.append(prediction)
-
-    accuracy = accuracy_score(true_answers, predictions)
-    f1 = f1_score(true_answers, predictions, average="weighted")
-
-    st.write(f"Accuracy: {accuracy}")
-    st.write(f"F1 Score: {f1}")
