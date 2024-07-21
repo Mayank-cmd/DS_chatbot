@@ -44,7 +44,7 @@ def add_to_vector_store(raw_text):
     vector_store.add_texts(texts)  # Add all texts
 
 # --- Streamlit App ---
-st.title("DataScience:GPT - PDF Q&A Chatbot")
+st.title("DocuBot - Ask Your Questions!!")
 
 # File Upload
 uploaded_file = st.file_uploader("Upload a PDF file", type="pdf")
